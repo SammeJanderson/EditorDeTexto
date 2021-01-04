@@ -8,7 +8,7 @@ O programa pode abrir, editar, salvar e imprimir arquivos simples de texto.
 
 
 ## Requisitos 
-+ Java 8 ou superior
++ Java 9 ou superior
 
 
 ## Rodando
