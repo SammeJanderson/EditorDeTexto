@@ -6,6 +6,11 @@ O programa pode abrir, editar, salvar e imprimir arquivos simples de texto.
 
 ![img](https://github.com/SammeJanderson/EditorDeTexto/blob/main/Demostra%C3%A7%C3%A3oDoEditor2.gif)
 
+
+## Requisitos 
++ Java 8 ou superior
+
+
 ## Rodando
 
 Para rodar o programa use o comando.
