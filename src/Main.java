@@ -11,9 +11,8 @@ public class Main extends JFrame implements ActionListener {
     private final int WIDTH = 500;
     private final int HEIGHT = 500;
 
-
     public Main() {
-        //Cria janela
+        //janela
         window = new JFrame("Editor");
 
         textArea = new JTextArea();
@@ -57,20 +56,16 @@ public class Main extends JFrame implements ActionListener {
         JLabel aboutMeLabel = new JLabel();
         JButton profileButton = new JButton();
 
-
         aboutMeLabel.setText("Criado por ");
         aboutMenu.add(aboutMeLabel);
         aboutMenu.add(profileButton);
-
 
         profileButton.setText("Samme Janderson");
         profileButton.setHorizontalAlignment(SwingConstants.LEFT);
         profileButton.setBorderPainted(false);
         profileButton.setOpaque(false);
         profileButton.setToolTipText("https://github.com/SammeJanderson");
-
         profileButton.setBackground(Color.WHITE);
-
 
         //Adicionar menus a barra de menus
         menuBar.add(fileMenu);
@@ -79,22 +74,18 @@ public class Main extends JFrame implements ActionListener {
 
         ImageIcon imageIcon = new ImageIcon("icon.png");
 
-        //adiciona componentes
+        //adiciona componentes 
         window.setJMenuBar(menuBar);
         window.add(textArea);
-
-
-
+        
+        //Configurações da janela
         window.setSize(WIDTH, HEIGHT);
         window.setVisible(true);
         window.setIconImage(imageIcon.getImage());
         window.setResizable(false);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ToolTipManager.sharedInstance().setInitialDelay(100);
-
-
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -105,10 +96,9 @@ public class Main extends JFrame implements ActionListener {
             case "Copiar" -> textArea.copy();
             case "Colar" -> textArea.paste();
             case "Salvar" -> {
-//               cria um objeto da classe JfileChooser
-                jFileChooser = new JFileChooser("f: ");
 
-//                invoca a função para mostrar o dialogo de salvar
+                jFileChooser = new JFileChooser("file: ");
+
                 int r = jFileChooser.showSaveDialog(null);
 
                 if (r == JFileChooser.APPROVE_OPTION) {
@@ -138,7 +128,7 @@ public class Main extends JFrame implements ActionListener {
                 }
             }
             case "Abrir" -> {
-                JFileChooser fileChooser = new JFileChooser("f: ");
+                JFileChooser fileChooser = new JFileChooser("file: ");
                 int r = fileChooser.showOpenDialog(null);
 
                 if (r == JFileChooser.APPROVE_OPTION) {
